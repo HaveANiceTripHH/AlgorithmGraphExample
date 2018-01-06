@@ -3,11 +3,14 @@ import java.util.Random;
 
 /**
  * 选择排序
- * 依次选择最小（大）的值放到对应的值
+ * 依次选择最小（大）的值放到对应的位置
  * 算法复杂度为O（n^2）
  */
+@SuppressWarnings("unused")
 public class ChooseSort implements AlgorithmInGraph {
 
+
+    @SuppressWarnings("Duplicates")
     public void showAlgorithm() {
         int [] array = new int[10];
         Random random = new Random();
