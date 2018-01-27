@@ -1,6 +1,6 @@
+import SupportData.GraphSearchUtil;
+import SupportData.TestUtil;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class GraphSearchUtilTest {
 
@@ -9,4 +9,10 @@ public class GraphSearchUtilTest {
         int [][] graph = GraphSearchUtil.generateGraph(5);
         GraphSearchUtil.printGraph(graph);
     }
+
+    @Test
+    public void testTest(){
+        TestUtil.getAllClassesByPackageName("");
+    }
+
 }

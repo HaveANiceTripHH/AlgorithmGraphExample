@@ -17,6 +17,7 @@ public class QuickSort implements  AlgorithmInGraph{
         for(int i = 0;i<10;i++){
             array[i] = random.nextInt(100);
         }
+        array = new int[]{58, 67, 58, 72, 1, 52, 91, 80, 42, 58};
         System.out.println("排序前生成的数组的顺序是: \t" + Arrays.toString(array));
         sort(array);
         System.out.println("排序后的数组的顺序是: \t" +  Arrays.toString(array));
@@ -35,10 +36,11 @@ public class QuickSort implements  AlgorithmInGraph{
         int right = end;
         int value = array[start];
         while(left < right){
-            while(array[right] > value && left < right)
+            //这里为什么是大于等于?因为在右边的大于等于标准值就可以了.如果不加等号,那么相等的值就没有办法
+            while(array[right] >= value && left < right)
                 right--;
             array[left] = array[right];
-            while(array[left] < value && left < right)
+            while(array[left] <= value && left < right)
                 left++;
             array[right] = array[left];
         }
